@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node ./server/index.js",
+    "dev": "concurrently \"nuxt\" \"npm run serve\"",
+    "serve": "node ./server/index.js",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
     "axios": "^0.21.0",
+    "consola": "^2.15.0",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
     "nuxt": "^2.14.6"
